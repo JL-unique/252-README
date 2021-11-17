@@ -1,0 +1,36 @@
+-----------------------------------------------------------
+NOTE:
+The instructions were a bit unclear about if we were supposed to develop our own stack and queue classes. I figured that since the code was basically given to us in
+the lecture video, I would use the std versions of them and spend more time on the program itself. Particularly, in the requirements section of the assignment
+description it says "whatever other .cpp or .h files you wrote (at least one of each, for sure)." Since there would be two of each if I implemented I took that as evidence.
+On the other hand you did not even mention the std versions in the lectures, so idk.
+I do not see anywhere in the directions that would not allow the use of the existing ones, and this worked well for me due to my severely limited time this week lol.
+It also made it more fun, since I could spend more time on making the program have nice text-based dungeon features.
+-----------------------------------------------------------
+Description: Program uses stacks and queues to simulate a dining experience with various plates and a lazy suzan.
+
+Input: All input if from the command line, user is prompted before entering. 
+       The value of the first prompt must be an integer greater than 1 since the party size determines the number of plates.
+       The value of all subsequent prompts must be as prompted.
+       Specifically, the value of the choice prompt which repeats throughout the program must be either {rotate,decorate,get,put,eat}.
+
+Output: All output is to the command line. Reads like a text-based dungeon crawler.
+
+Program design: each plate is a stack, each plate holds pancakes, each pancake is a string, the lazy suzan is a queue of plates. 
+                The program outputs prompts and information, and asks the user to choose between a couple of choices for things they can do.
+
+file             function           description
+--------------   -----------------  ----------------------
+prototypes.h     declarations       prototypes for main
+main.cpp         main               main function
+rotate.cpp       rotate function    rotate function
+decorate.cpp     decorate function  decorate function
+get.cpp          get function       get function
+put.cpp          put function       put function
+eat.cpp          eat function       eat function
+makefile         makefile           makefile
+
+
+Testing: I tested the program in every permutation of choice that I could think of so there should be no errors or crashes.
+
+Bugs: not really, the decoration strings could be formatted nicer in the cases of multiple decorations
